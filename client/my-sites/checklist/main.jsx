@@ -61,16 +61,6 @@ class ChecklistMain extends PureComponent {
 		}
 	}
 
-	getHeaderTitle() {
-		const { translate, siteHasFreePlan } = this.props;
-
-		if ( siteHasFreePlan ) {
-			return translate( 'Your site has been created!' );
-		}
-
-		return translate( 'Thank you for your purchase!' );
-	}
-
 	getSubHeaderText( displayMode ) {
 		const { translate } = this.props;
 
@@ -126,7 +116,11 @@ class ChecklistMain extends PureComponent {
 						alt=""
 					/>
 					<FormattedHeader
-						headerText={ this.getHeaderTitle() }
+						headerText={
+							this.props.siteHasFreePlan
+								? translate( 'Your site has been created!' )
+								: translate( 'Thank you for your purchase!' )
+						}
 						subHeaderText={ this.getSubHeaderText( displayMode ) }
 					/>
 				</Fragment>
