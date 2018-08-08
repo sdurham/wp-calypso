@@ -202,7 +202,7 @@ export class ChecklistBanner extends Component {
 }
 
 const mapStateToProps = ( state, { siteId } ) => {
-	const tasksFromServer = get( getSiteChecklist( state, siteId ), [ 'tasks' ] );
+	const tasksFromServer = getSiteChecklist( state, siteId );
 	const tasks = tasksFromServer
 		? mergeObjectIntoArrayById( onboardingTasks, tasksFromServer )
 		: null;

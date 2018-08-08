@@ -6,7 +6,7 @@
 import React, { Fragment, PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import { find, get } from 'lodash';
+import { find } from 'lodash';
 
 /**
  * Internal dependencies
@@ -68,10 +68,9 @@ class ChecklistShow extends PureComponent {
 const mapStateToProps = state => {
 	const siteId = getSelectedSiteId( state );
 	const siteSlug = getSiteSlug( state, siteId );
-	const siteChecklist = getSiteChecklist( state, siteId );
+	const tasksFromServer = getSiteChecklist( state, siteId );
 	const isJetpack = isJetpackSite( state, siteId );
 	const tasks = isJetpack ? jetpackTasks : wpcomTasks;
-	const tasksFromServer = get( siteChecklist, [ 'tasks' ] );
 
 	return {
 		siteId,
