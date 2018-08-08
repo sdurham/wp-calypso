@@ -25,7 +25,6 @@ import SidebarNavigation from 'my-sites/sidebar-navigation';
 import { getCurrentUser } from 'state/current-user/selectors';
 import { getSelectedSiteId } from 'state/ui/selectors';
 import { isJetpackSite, isNewSite, getSiteSlug } from 'state/sites/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
 import isSiteOnFreePlan from 'state/selectors/is-site-on-free-plan';
 
 class ChecklistMain extends PureComponent {
@@ -112,11 +111,7 @@ class ChecklistMain extends PureComponent {
 							"You have completed all your tasks. Now let's tell people about it. Share your site."
 						) }
 					/>
-					<ChecklistShowShare
-						className="checklist__share"
-						siteSlug={ this.props.siteSlug }
-						recordTracksEvent={ this.props.recordTracksEvent }
-					/>
+					<ChecklistShowShare className="checklist__share" siteSlug={ this.props.siteSlug } />
 				</Fragment>
 			);
 		}
@@ -207,7 +202,4 @@ const mapStateToProps = state => {
 	};
 };
 
-export default connect(
-	mapStateToProps,
-	{ recordTracksEvent }
-)( localize( ChecklistMain ) );
+export default connect( mapStateToProps )( localize( ChecklistMain ) );
