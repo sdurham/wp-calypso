@@ -22,7 +22,7 @@ import ProgressBar from 'components/progress-bar';
 import QuerySiteChecklist from 'components/data/query-site-checklist';
 import getSiteChecklist from 'state/selectors/get-site-checklist';
 import { getSite, getSiteSlug } from 'state/sites/selectors';
-import { launchTask, tasks } from 'my-sites/checklist/onboardingChecklist';
+import { launchTask, tasks } from 'my-sites/checklist/wpcom-checklist';
 import ChecklistShowShare from 'my-sites/checklist/share';
 import { recordTracksEvent } from 'state/analytics/actions';
 import { requestGuidedTour } from 'state/ui/guided-tours/actions';

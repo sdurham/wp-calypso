@@ -11,7 +11,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ChecklistShow from './checklist-show';
+import OnboardingChecklist from './onboarding-checklist';
 import ChecklistShowShare from './share';
 import config from 'config';
 import DocumentHead from 'components/data/document-head';
@@ -156,7 +156,7 @@ class ChecklistMain extends PureComponent {
 			<Fragment>
 				{ siteId && <QuerySiteChecklist siteId={ siteId } /> }
 				{ this.renderHeader( completed, displayMode ) }
-				<ChecklistShow />
+				<OnboardingChecklist />
 			</Fragment>
 		);
 	}

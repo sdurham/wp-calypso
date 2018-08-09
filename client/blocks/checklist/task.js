@@ -4,7 +4,7 @@
  */
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
-import { launchTask } from 'my-sites/checklist/onboardingChecklist';
+import { launchTask } from 'my-sites/checklist/wpcom-checklist';
 import { connect } from 'react-redux';
 
 /**

@@ -19,8 +19,8 @@ import QuerySiteChecklist from 'components/data/query-site-checklist';
 import Task from 'blocks/checklist/task';
 import { getSelectedSiteId } from 'state/ui/selectors';
 import { isJetpackSite, getSiteSlug } from 'state/sites/selectors';
-import { tasks as jetpackTasks } from '../jetpack-checklist';
-import { tasks as wpcomTasks } from '../onboardingChecklist';
+import { tasks as jetpackTasks } from './jetpack-checklist';
+import { tasks as wpcomTasks } from './wpcom-checklist';
 
 class ChecklistShow extends PureComponent {
 	static propTypes = {
