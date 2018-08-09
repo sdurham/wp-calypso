@@ -13,7 +13,7 @@ import { localize } from 'i18n-calypso';
  */
 import ChecklistShow from './checklist-show';
 import ChecklistShowShare from './share';
-import config from 'config';
+import { isEnabled } from 'config';
 import DocumentHead from 'components/data/document-head';
 import EmptyContent from 'components/empty-content';
 import FormattedHeader from 'components/formatted-header';
@@ -168,7 +168,7 @@ export default connect( state => {
 	const isAtomic = isSiteAutomatedTransfer( state, siteId );
 	const isJetpack = isJetpackSite( state, siteId );
 	return {
-		checklistAvailable: ! isAtomic && ( config.isEnabled( 'jetpack/checklist' ) || ! isJetpack ),
+		checklistAvailable: ! isAtomic && ( isEnabled( 'jetpack/checklist' ) || ! isJetpack ),
 		isAtomic,
 		isJetpack,
 		isNewlyCreatedSite: isNewSite( state, siteId ),
