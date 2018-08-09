@@ -3609,6 +3609,16 @@
         "source-map": "^0.1.38",
         "source-map-resolve": "^0.5.1",
         "urix": "^0.1.0"
+      },
+      "dependencies": {
+        "source-map": {
+          "version": "0.1.43",
+          "resolved": "https://registry.npmjs.org/source-map/-/source-map-0.1.43.tgz",
+          "integrity": "sha1-wkvBRspRfBRx9drL4lcbK3+eM0Y=",
+          "requires": {
+            "amdefine": ">=0.0.4"
+          }
+        }
       }
     },
     "css-loader": {
@@ -5928,7 +5938,8 @@
         },
         "ansi-regex": {
           "version": "2.1.1",
-          "bundled": true
+          "bundled": true,
+          "optional": true
         },
         "aproba": {
           "version": "1.2.0",
@@ -6293,7 +6304,8 @@
         },
         "safe-buffer": {
           "version": "5.1.1",
-          "bundled": true
+          "bundled": true,
+          "optional": true
         },
         "safer-buffer": {
           "version": "2.1.2",
@@ -6341,6 +6353,7 @@
         "strip-ansi": {
           "version": "3.0.1",
           "bundled": true,
+          "optional": true,
           "requires": {
             "ansi-regex": "^2.0.0"
           }
@@ -6379,11 +6392,13 @@
         },
         "wrappy": {
           "version": "1.0.2",
-          "bundled": true
+          "bundled": true,
+          "optional": true
         },
         "yallist": {
           "version": "3.0.2",
-          "bundled": true
+          "bundled": true,
+          "optional": true
         }
       }
     },
@@ -15061,9 +15076,9 @@
       "integrity": "sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g="
     },
     "tinymce": {
-      "version": "4.8.1",
-      "resolved": "https://registry.npmjs.org/tinymce/-/tinymce-4.8.1.tgz",
-      "integrity": "sha512-ZSXfVXDkTSPcvvOENFL+NCK/oHdDL5JsgiBP4ljEnED5eHoI7Mbi2sX+CjGFix38dRNKI/CXN0pUCoIHCyUmlQ=="
+      "version": "4.8.2",
+      "resolved": "https://registry.npmjs.org/tinymce/-/tinymce-4.8.2.tgz",
+      "integrity": "sha512-ssq/cGcK8ELG+a96H2mqH6QvsmTSlQk9wj+OYxLIOxsDnWfu90T1TGIachwcQnXsD5FeNFz5X7K860CP9JQCtQ=="
     },
     "title-case-minors": {
       "version": "1.0.0",
