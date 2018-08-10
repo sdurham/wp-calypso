@@ -29,6 +29,7 @@ const wordpressPackages = [
 	'editor',
 	'element',
 	'i18n',
+	'plugins',
 ];
 
 const getWordPressExternals = () =>
