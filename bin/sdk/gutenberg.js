@@ -25,6 +25,7 @@ const wordpressPackages = [
 	'block-serialization-spec-parser',
 	'blocks',
 	'components',
+	'compose',
 	'data',
 	'editor',
 	'element',
